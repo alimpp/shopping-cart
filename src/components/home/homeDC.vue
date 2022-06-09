@@ -42,12 +42,7 @@ export default {
            getStarted : "Get Started" ,
        }
    } ,
-   components : {coreBtnPrimary , coreFooter } ,
-   computed : {
-       getData(){
-          return this.$store.getters['Products/filterProduct']
-       }
-   } , 
+   components : {coreBtnPrimary , coreFooter } , 
    methods : {
        goToHome(){
            const elem = this.$refs.home

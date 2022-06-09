@@ -21,9 +21,6 @@ const Products = {
        getProduct(state){
           return state.products
        } ,
-       filterProduct(state){
-           return state.products.slice(0,6)
-       } ,
     },
     mutations: {
         

@@ -1,15 +1,39 @@
 <template>
-<div class="app">
-  
-</div>
+    <div class="app">
+      <div class="header">
+          <coreHeader/>
+      </div>
+      <div class="router scrollbar">
+          <router-view></router-view>
+      </div>
+     
+    </div>
 </template>
 
 <script>
-export default {
+import coreHeader from './components/cores/coreHeader.vue'
 
+export default {
+    components : {coreHeader}
 }
 </script>
 
-<style>
+<style scoped >
+.app{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    width: 100%;
+    height: 10vh;
+}
+.router{
+    width: 100%;
+    height: 90vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
 
 </style>

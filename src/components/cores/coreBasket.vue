@@ -13,7 +13,7 @@
       </button>
 
   <div
-      class="offcanvas offcanvas-end navigation bg-primary"
+      class="offcanvas offcanvas-end navigation"
       tabindex="-1"
       id="offcanvasWithBackdrop"
       aria-labelledby="offcanvasWithBackdropLabel"
@@ -29,12 +29,12 @@
           style="color:#fafafa;"
         ></button>
       </div>
-        <div class="offcanvas-body">
-        
+        <div class="offcanvas-body dark_color">
+          
         </div>
+      </div>
     </div>
-  </div>
-
+ 
 </template>
 
 <script>

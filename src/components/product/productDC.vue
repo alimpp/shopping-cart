@@ -3,7 +3,8 @@
       <div class="container animate__animated animate__fadeIn">
           <div class="row">
               <div class="col-sm-4" v-for="data in getData" :key="data.id">
-                    <div class="card mb-3" style="max-width: 540px;">
+                <a class="link" :href="`/product/${data.id}`">
+                    <div class="card mb-3 cardHover" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
                         <img :src="data.img" class="img-fluid rounded-start" alt="ERROR" style="width:100%;">
@@ -20,8 +21,10 @@
                         </div>
                     </div>
                     </div>
+                </a>
               </div>
           </div>
+          <router-view></router-view>
           <coreFooter/>
       </div>
   </div>

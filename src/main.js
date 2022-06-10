@@ -10,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import './assets/css/main.css'
-import './assets/css/anim.css'
 import './assets/css/size.css'
 import './assets/css/text-color.css'
 

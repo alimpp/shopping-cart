@@ -23,6 +23,8 @@
 
 .link{text-decoration: none;}
 
+.error_input{border: 1px solid red;}
+
 ::-webkit-scrollbar{width: 0px;}
 ::-webkit-scrollbar-track{background-color: #fafafa;border-radius: 5px;}
 ::-webkit-scrollbar-thumb{background-color: #fdfdfd; border-radius: 5px;} 

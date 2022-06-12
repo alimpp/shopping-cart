@@ -32,6 +32,7 @@
 
 <script>
 import Swal from 'sweetalert2'
+import axios from 'axios'
 export default {
     data(){
         return{
@@ -49,18 +50,27 @@ export default {
             if(this.email.length < 5){isDone = false , this.emailError = true}else{this.emailError = false}
             if(this.password.length < 8){isDone = false , this.passwordError = true}else{this.passwordError = false}
             if(isDone){
-                Swal.fire({
-                position: 'top',
-                icon: 'success',
-                title: 'Login is Done',
-                showConfirmButton: false,
-                timerProgressBar : true , 
-                toast : true , 
-                timer: 4000
-                })
-                this.$router.push('/')
-                this.email = "" , 
-                this.password = ""
+                axios.post(`https://api.freerealapi.com/auth/login/` , {email : this.email , password : this.password})
+                .then( response => {
+                    console.log(response);
+                    this.$store.commit('LOGIN' , response.data.token)
+                    this.$router.push('/product')
+                    Swal.fire({
+                    position: 'top',
+                    icon: 'success',
+                    title: 'Login is Done',
+                    showConfirmButton: false,
+                    timerProgressBar : true , 
+                    toast : true , 
+                    timer: 4000
+                    })
+                    this.$router.push('/')
+                    this.email = "" , 
+                    this.password = ""
+                    })
+                    .catch(
+                        // need alert for user
+                    )
             }
         }
     }

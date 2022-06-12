@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import Products from './modules/product'
 import { LOGIN , ONSTART,  LOGOUT} from './constans/constans'
+import axios from 'axios'
 export default createStore({
   state: {
     isAuth : false , 

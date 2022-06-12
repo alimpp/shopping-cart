@@ -17,11 +17,11 @@ export default {
     components : {coreHeader} ,
     watch : {
         $route(){
-        this.$store.commit('Login/ON_START')
+        this.$store.commit('ONSTART')
         }
      } ,
     mounted(){
-        this.$store.commit('Login/ON_START')
+        this.$store.commit('ONSTART')
      }
 }
 </script>

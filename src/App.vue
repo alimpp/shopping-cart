@@ -14,7 +14,15 @@
 import coreHeader from './components/cores/coreHeader.vue'
 
 export default {
-    components : {coreHeader}
+    components : {coreHeader} ,
+    watch : {
+        $route(){
+        this.$store.commit('Login/ON_START')
+        }
+     } ,
+    mounted(){
+        this.$store.commit('Login/ON_START')
+     }
 }
 </script>
 

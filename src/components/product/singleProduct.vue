@@ -14,10 +14,10 @@
                 <p class="card-text">{{product.title}}</p>
                 <p class="dark_color size_b">{{product.price}}</p>
                 <div class="d-flex">
-                    <p class="dark_color my-1 size_c" style="  cursor: pointer;">{{product.like}}</p>
-                    <i class="bi bi-hand-thumbs-up-fill my-1 size_c" style="  cursor: pointer;"></i>
-                    <p class="dark_color my-1 size_c" style="margin-left:10px;   cursor: pointer;">{{product.dislike}}</p>
-                    <i class="bi bi-hand-thumbs-down-fill my-1 size_c" style="  cursor: pointer;"></i>
+                    <p class="dark_color my-1 size_c" style="  cursor: pointer;" @click="like">{{product.like}}</p>
+                    <i class="bi bi-hand-thumbs-up-fill my-1 size_c" style="  cursor: pointer;" @click="like"></i>
+                    <p class="dark_color my-1 size_c"  style="margin-left:10px;   cursor: pointer;" @click="dislike">{{product.dislike}}</p>
+                    <i class="bi bi-hand-thumbs-down-fill my-1 size_c" style="  cursor: pointer;" @click="dislike"></i>
                 </div>
                 <div class="d-flex">
                     <i class="bi bi-star-fill" style="color:yellow;"></i>
@@ -65,6 +65,12 @@ export default {
         } , 
         goToProduct(){
             return this.$router.push('/product')
+        } ,
+        like(){
+           return this.product.like ++
+        } , 
+        dislike(){
+            return this.product.dislike ++
         }
     }
     

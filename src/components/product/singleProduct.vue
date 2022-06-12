@@ -5,7 +5,7 @@
         <div class="card mb-3 animate__animated animate__bounceInRight" style="max-width: 100%;">
         <div class="row g-0">
             <div class="col-md-4">
-            <img :src="product.img" class="img-fluid rounded-start" alt="ERROR" style="width:100%; height:35vh;">
+            <img :src="product.img" class="img-fluid rounded-start" alt="ERROR" style="width:70%; height:30vh;">
             </div>
             <div class="col-md-8">
 
@@ -73,7 +73,6 @@ export default {
             return this.product.dislike ++
         }
     }
-    
 }
 </script>
 

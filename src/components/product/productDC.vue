@@ -14,9 +14,16 @@
                             <p class="dark_color size_b">{{data.name}}</p>
                             <p class="dark_color size_x">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer</p>
                             <div class="d-flex">
-                                <p class="dark_color size_b">{{data.price}}</p>
-                                <coreBtnPrimary class="mx-2" :addToCart="addToCart"/>
+                            <p class="dark_color size_b">{{data.price}}</p>
+                            <div class="d-flex mt-2 mx-2">
+                                <i class="bi bi-star-fill" style="color:yellow;"></i>
+                                <i class="bi bi-star-fill" style="color:yellow;"></i>
+                                <i class="bi bi-star-fill" style="color:yellow;"></i>
+                                <i class="bi bi-star-fill" style="color:yellow;"></i>
+                                <i class="bi bi-star-fill" style="color:yellow;"></i>
                             </div>
+                            </div>
+                            <coreBtnPrimary class="mt-2" :addToCart="addToCart"/>
                         </div>
                         </div>
                     </div>

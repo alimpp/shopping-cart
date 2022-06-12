@@ -8,11 +8,24 @@
             <img :src="product.img" class="img-fluid rounded-start" alt="ERROR" style="width:100%; height:35vh;">
             </div>
             <div class="col-md-8">
+
             <div class="card-body mt-5">
                 <h5 class="card-title">{{product.name}}</h5>
                 <p class="card-text">{{product.title}}</p>
-                <p class="dark_color size_c">{{product.price}}</p>
-                <coreBtnPrimary :addToCart="addToCart"/>
+                <p class="dark_color size_b">{{product.price}}</p>
+                <div class="d-flex">
+                    <p class="dark_color my-1 size_c" style="  cursor: pointer;">{{product.like}}</p>
+                    <i class="bi bi-hand-thumbs-up-fill my-1 size_c" style="  cursor: pointer;"></i>
+                    <p class="dark_color my-1 size_c" style="margin-left:10px;   cursor: pointer;">{{product.dislike}}</p>
+                    <i class="bi bi-hand-thumbs-down-fill my-1 size_c" style="  cursor: pointer;"></i>
+                </div>
+                <div class="d-flex">
+                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                </div>
             </div>
             </div>
         </div>
@@ -37,7 +50,6 @@ export default {
        return{
         products : [] ,
         product : [] , 
-        addToCart : 'Add To Cart'
        }
     } ,
     components : {coreBtnPrimary , coreFooter} ,

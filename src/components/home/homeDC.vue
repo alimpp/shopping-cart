@@ -9,7 +9,10 @@
               <div class="col-sm-6 justify animate__animated animate__fadeIn">
                   <p class="dark_color size_b">Welcome To Shopping Cart</p>
                   <p class="dark_color size_c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in tempora, voluptates aut nobis numquam. Nisi corrupti delectus ipsum reiciendis rem!</p>
-                  <coreBtnPrimary @click="goToHome" :getStarted="getStarted" />
+                  <div class="d-flex">
+                        <coreBtnPrimary @click="goToHome" :getStarted="getStarted" />
+                        <coreLogOut class="mx-1" v-if="this.$store.state.isAuth"/>
+                  </div>
               </div>
            </div>
 
@@ -35,14 +38,14 @@
 <script>
 import coreBtnPrimary from '../cores/coreBtnPrimary.vue'
 import coreFooter from '../cores/coreFooter.vue'
-
+import coreLogOut from '../cores/coreLogOut.vue'
 export default {
    data(){
        return{
            getStarted : "Get Started" ,
        }
    } ,
-   components : {coreBtnPrimary , coreFooter } , 
+   components : {coreBtnPrimary , coreFooter , coreLogOut } , 
    methods : {
        goToHome(){
            const elem = this.$refs.home

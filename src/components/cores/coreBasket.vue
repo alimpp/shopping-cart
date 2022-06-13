@@ -31,7 +31,7 @@
       </div>
         <div class="offcanvas-body dark_color">
            <div class="d-flex">
-           <p class="primary_color size_b">Your Cart</p>
+           <p class="dark_color size_c">Your Cart</p>
            </div>
         </div>
       </div>

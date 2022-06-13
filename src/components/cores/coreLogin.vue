@@ -47,7 +47,7 @@ export default {
     methods : {
         doLogin(){
             let isDone = true
-            if(this.email.length < 5){isDone = false , this.emailError = true}else{this.emailError = false}
+            if(this.email.length < 8){isDone = false , this.emailError = true}else{this.emailError = false}
             if(this.password.length < 8){isDone = false , this.passwordError = true}else{this.passwordError = false}
             if(isDone){
                 axios.post(`https://api.freerealapi.com/auth/login/` , {email : this.email , password : this.password})

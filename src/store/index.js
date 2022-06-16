@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import Products from './modules/product'
+import Cart from './modules/cart'
 import { LOGIN , ONSTART,  LOGOUT} from './constans/constans'
 import axios from 'axios'
 export default createStore({
@@ -41,6 +42,7 @@ export default createStore({
       }
   },
   modules: {
-    Products : Products
+    Products : Products , 
+    Cart : Cart , 
   }
 })

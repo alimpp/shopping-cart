@@ -2,7 +2,7 @@
   <div class="productDC">
       <div class="container animate__animated animate__fadeIn">
           <div class="row">
-              <div class="col-sm-4" v-for="data in getData" :key="data.id">
+              <div class="col-lg-4" v-for="data in getData" :key="data.id">
                 
                     <div class="card mb-3 cardHover" style="max-width: 540px;">
                     <div class="row g-0">
@@ -29,7 +29,7 @@
                             </div>
                             </div>
                             </a>
-                            <coreBtnPrimary class="mt-2" :addToCart="addToCart"/>
+                            <coreBtnPrimary @click="addCart(data)" :addToCart="addToCart"/>
                         </div>
                         </div>
                     </div>
@@ -52,12 +52,18 @@ export default {
            addToCart : 'Add To Cart'
         }
     } ,
+    methods : {
+       addCart(data){
+         return this.$store.dispatch('Cart/ADD_TO_CART' , data)
+       }
+    } ,
     computed : {
        getData(){
           return this.$store.getters['Products/getProduct']
        }
     } ,
-    components : {coreBtnPrimary , coreFooter}
+    components : {coreBtnPrimary , coreFooter} ,
+   
 }
 </script>
 

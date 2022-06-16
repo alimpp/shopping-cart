@@ -31,3 +31,5 @@
 
 .cardHover{box-shadow: none; cursor: pointer; transition: 0.5s;}
 .cardHover:hover{box-shadow: 5px 5px 2px 3px #888888;}
+
+.systemBadge{height: 28px; padding: 1px 8px; background: red; color: #fafafa; border-radius: 30px;}

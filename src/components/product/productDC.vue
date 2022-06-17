@@ -19,7 +19,7 @@
                             </a>
                             <a class="link" :href="`/product/${data.id}`">
                             <div class="d-flex">
-                            <p class="dark_color size_b">{{data.price}}</p>
+                            <p class="dark_color size_b">{{data.price}}$</p>
                             <div class="d-flex mt-2 mx-2">
                                 <i class="bi bi-star-fill" style="color:yellow;"></i>
                                 <i class="bi bi-star-fill" style="color:yellow;"></i>

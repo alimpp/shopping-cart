@@ -33,21 +33,24 @@
   
            <h5 class="card-title">Your Cart</h5>
            
-            <div class="card mb-3">
+            <div class="card mb-3" v-for="data in getData" :key="data.id">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="" class="img-fluid rounded-start" alt="...">
+                  <img :src="data.img" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">6000$</h5>
+                    <h5 class="card-title">{{data.price}}$</h5>
                     <div class="d-flex">
-                      <button class="btn btn-dark">+</button>
-                      <h6 class="pt-2 px-2">10</h6>
-                      <button class="btn btn-dark">-</button>
+                      <button class="btn btn-dark" @click="increment(data.id)">+</button>
+                      <h6 class="pt-2 px-2">{{data.quantity}}</h6>
+                      <button class="btn btn-dark" @click="decrement(data.id)">-</button>
                     </div>
                     <h5 class="pt-2 card-title">Sub Total</h5>
-                    <h6>150000$</h6>
+                    <div class="d-flex">
+                      <h6 class="pt-1">{{data.price * data.quantity}}</h6>
+                      <i class="bi bi-trash-fill size_c px-2 pointer" @click="deleteItem(data.id)"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -55,9 +58,9 @@
 
             <hr>
             <div class="d-flex">
-               <button class="btn btn-danger">Clear Cart</button>
+               <button class="btn btn-danger" @click="clearCart">Clear Cart</button>
                <h5 class="card-title px-5 pt-2">Total</h5>
-               <h5 class="card-title pt-2">15000$</h5>
+               <h5 class="card-title pt-2">{{totalPrice}}</h5>
             </div>
 
         </div>
@@ -68,7 +71,28 @@
 
 <script>
 export default {
-
+   computed : {
+    getData(){
+      return this.$store.getters['Cart/GET_CART']
+    } , 
+    totalPrice(){
+      return this.$store.getters['Cart/TOTAL_PRICE']
+    }
+   } , 
+   methods : {
+    clearCart(){
+      return this.$store.commit('Cart/CLEAR_CART')
+    } , 
+    increment(id){
+      return this.$store.dispatch('Cart/INCREMENT' , id)
+    } , 
+    decrement(id){
+      return this.$store.dispatch('Cart/DECREMENT' , id)
+    } , 
+    deleteItem(id){
+      return this.$store.dispatch('Cart/DELETE' , id)
+    }
+   }
 }
 </script>
 

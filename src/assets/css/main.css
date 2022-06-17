@@ -21,6 +21,8 @@
     align-items: center;
 }
 
+.pointer{cursor: pointer;}
+
 .link{text-decoration: none;}
 
 .error_input{border: 1px solid red;}

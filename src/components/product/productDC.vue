@@ -1,5 +1,5 @@
 <template>
-  <div class="productDC">
+  <div class="productDC mt-4">
       <div class="container animate__animated animate__fadeIn">
           <div class="row">
               <div class="col-lg-4" v-for="data in getData" :key="data.id">

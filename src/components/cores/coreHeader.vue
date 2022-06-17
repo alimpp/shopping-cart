@@ -1,17 +1,12 @@
 <template>
   <div class="coreHeader">
-     <div class="d-flex">
-         <div class="col-sm-6 d-flex">
-            <p class="size_c dark_color px-2 py-3">Cart</p>
-         </div>
-         <div class="col-sm-6 d-flex headerList">
-             <div class="d-flex">
-                <span class="systemBadge mt-3" v-if="hiddenCount">{{countCartItem}}</span>
-                <coreBasket/>
-             </div>
-             <coreLogin class="mx-1 my-3"/>
+     <div class="d-flex headerList">
+             <coreLogin class="mx-2 my-3"/>
              <coreRegister class="mx-1 my-3"/>
-         </div>
+             <div class="d-flex">
+               <coreBasket/>
+               <span class="systemBadge mt-3" v-if="hiddenCount">{{countCartItem}}</span> 
+             </div>
      </div>
   </div>
 </template>
@@ -37,6 +32,8 @@ export default {
 
 <style scoped>
 .headerList{
-    justify-content: right;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 </style>

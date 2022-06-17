@@ -83,7 +83,7 @@ const Cart = {
                 showConfirmButton: false,
                 timerProgressBar : true , 
                 toast : true , 
-                timer: 4000
+                timer: 1000
             })
        } , 
        [INCREMENT]({commit} , id){

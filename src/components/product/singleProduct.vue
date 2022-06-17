@@ -20,11 +20,12 @@
                     <i class="bi bi-hand-thumbs-down-fill my-1 size_c" style="  cursor: pointer;" @click="dislike"></i>
                 </div>
                 <div class="d-flex">
-                    <i class="bi bi-star-fill" style="color:yellow;"></i>
-                    <i class="bi bi-star-fill" style="color:yellow;"></i>
-                    <i class="bi bi-star-fill" style="color:yellow;"></i>
-                    <i class="bi bi-star-fill" style="color:yellow;"></i>
-                    <i class="bi bi-star-fill" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill my-1" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill my-1" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill my-1" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill my-1" style="color:yellow;"></i>
+                    <i class="bi bi-star-fill my-1" style="color:yellow;"></i>
+                    <button class="btn btn-primary mx-2" @click="addCart(product)">Add To Cart</button>
                 </div>
             </div>
             </div>
@@ -71,7 +72,10 @@ export default {
         } , 
         dislike(){
             return this.product.dislike ++
-        }
+        } ,
+        addCart(product){
+         return this.$store.dispatch('Cart/ADD_TO_CART' , product)
+        } ,
     }
 }
 </script>

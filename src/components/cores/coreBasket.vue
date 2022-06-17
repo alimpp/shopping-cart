@@ -31,8 +31,6 @@
       </div>
         <div class="offcanvas-body dark_color">
   
-           <h5 class="card-title">Your Cart</h5>
-           
             <div class="card mb-3" v-for="data in getData" :key="data.id">
               <div class="row g-0">
                 <div class="col-md-4">
@@ -48,7 +46,7 @@
                     </div>
                     <h5 class="pt-2 card-title">Sub Total</h5>
                     <div class="d-flex">
-                      <h6 class="pt-1">{{data.price * data.quantity}}</h6>
+                      <h6 class="pt-1">{{data.price * data.quantity}}$</h6>
                       <i class="bi bi-trash-fill size_c px-2 pointer" @click="deleteItem(data.id)"></i>
                     </div>
                   </div>
@@ -57,10 +55,11 @@
             </div>
 
             <hr>
+            
             <div class="d-flex">
                <button class="btn btn-danger" @click="clearCart">Clear Cart</button>
                <h5 class="card-title px-5 pt-2">Total</h5>
-               <h5 class="card-title pt-2">{{totalPrice}}</h5>
+               <h5 class="card-title pt-2">{{totalPrice}}$</h5>
             </div>
 
         </div>

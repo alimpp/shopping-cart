@@ -38,6 +38,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
+                    <h5 class="card-title">{{data.name}}</h5>
                     <h5 class="card-title">{{data.price}}$</h5>
                     <div class="d-flex">
                       <button class="btn btn-dark" @click="increment(data.id)">+</button>
@@ -49,6 +50,7 @@
                       <h6 class="pt-1">{{data.price * data.quantity}}$</h6>
                       <i class="bi bi-trash-fill size_c px-2 pointer" @click="deleteItem(data.id)"></i>
                     </div>
+                    <hr>
                   </div>
                 </div>
               </div>

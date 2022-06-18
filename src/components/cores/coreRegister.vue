@@ -1,10 +1,7 @@
 <template>
   <div class="coreRegister">
 
-      <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#register">
-                Register
-        </button>
-
+        <i class="bi bi-envelope-open-fill pointer size_b" data-bs-toggle="modal" data-bs-target="#register"></i>
 
         <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

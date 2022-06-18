@@ -1,11 +1,8 @@
 <template>
   <div class="coreLogin">
-     
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
-                Login
-        </button>
 
-
+        <i class="bi bi-door-open-fill pointer size_b" data-bs-toggle="modal" data-bs-target="#login"></i>
+        
         <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

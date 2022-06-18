@@ -1,13 +1,17 @@
 <template>
   <div class="coreHeader">
-     <div class="d-flex headerList">
-             <coreLogin class="mx-2 my-3"/>
-             <coreRegister class="mx-1 my-3"/>
-             <div class="d-flex">
-               <coreBasket/>
-               <span class="systemBadge mt-3" v-if="hiddenCount">{{countCartItem}}</span> 
-             </div>
-     </div>
+
+      <div class="brand">
+        <router-link to="/" class="navbar-brand mx-2 mt-3">Shopping Cart</router-link>
+        <coreBasket/>
+        <span class="systemBadge mt-3">{{countCartItem}}</span>
+      </div>
+
+      <div class="login-register-box d-flex">
+        <coreLogin class="mt-3 mx-2"/>
+        <coreRegister class="mt-3 mx-2"/>
+      </div>
+
   </div>
 </template>
 
@@ -31,9 +35,11 @@ export default {
 </script>
 
 <style scoped>
-.headerList{
+.coreHeader{
+   width: 100%;
+   height: 50px;
    display: flex;
-   justify-content: center;
-   align-items: center;
 }
+.brand{width: 50%; display: flex; justify-content: left;}
+.login-register-box{width: 50%; display: flex; justify-content: right;}
 </style>

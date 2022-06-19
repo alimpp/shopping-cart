@@ -49,7 +49,6 @@ export default {
             if(isDone){
                 axios.post(`https://api.freerealapi.com/auth/login/` , {email : this.email , password : this.password})
                 .then( response => {
-                    console.log(response);
                     this.$store.commit('LOGIN' , response.data.token)
                     this.$router.push('/product')
                     Swal.fire({

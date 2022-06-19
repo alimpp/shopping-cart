@@ -72,13 +72,13 @@
 
 <script>
 export default {
-   computed : {
-    getData(){
-      return this.$store.getters['Cart/GET_CART']
-    } , 
-    totalPrice(){
-      return this.$store.getters['Cart/TOTAL_PRICE']
-    }
+    computed : {
+      getData(){
+        return this.$store.getters['Cart/GET_CART']
+      } , 
+      totalPrice(){
+        return this.$store.getters['Cart/TOTAL_PRICE']
+      }
    } , 
    methods : {
     clearCart(){

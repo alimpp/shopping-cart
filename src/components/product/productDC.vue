@@ -1,6 +1,12 @@
 <template>
-  <div class="productDC mt-4">
+  <div class="productDC">
+    
       <div class="container animate__animated animate__fadeIn">
+
+        <div class="col-lg-12 mb-2">
+            <input class="form-control" v-model="search" placeholder="Search Product">
+        </div>
+
           <div class="row">
               <div class="col-lg-4" v-for="data in getData" :key="data.id">
                 
@@ -49,7 +55,8 @@ import coreFooter from '../cores/coreFooter.vue'
 export default {
     data(){
         return{
-           addToCart : 'Add To Cart'
+           addToCart : 'Add To Cart' , 
+           search : ""
         }
     } ,
     methods : {
@@ -59,7 +66,10 @@ export default {
     } ,
     computed : {
        getData(){
-          return this.$store.getters['Products/getProduct']
+          const products = this.$store.getters['Products/getProduct']
+          return products.filter(product => {
+            return product.name.match(this.search)
+          })
        }
     } ,
     components : {coreBtnPrimary , coreFooter} ,
